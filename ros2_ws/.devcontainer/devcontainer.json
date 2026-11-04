@@ -1,0 +1,16 @@
+{
+  "name": "ROS 2 Humble Simulation",
+  "image": "osrf/ros:humble-desktop",
+  "runArgs": ["--net=host", "--ipc=host"],
+  "containerEnv": {
+    "DISPLAY": ":0"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros"
+      ]
+    }
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y ros-humble-turtlebot4-simulator"
+}
